@@ -1,0 +1,86 @@
+#start with the welcome script.
+print("Welcome to computer quiz.")
+
+# Starting the questions and making sure the player is ready.
+print(" In this quiz you will be presented with 3 question and you get 100 pints for each right answer, so buckle up")
+
+#Creating a dictionay for the question and the options available for the player.
+Question_1 = {
+    "question":"What does CPU stands for?",
+    "options":{
+        "A": "Central Processing Unit",
+        "B": "Control Process Unit",
+        "C": "Computer Personal Unit",
+        "D": "Central Program Utility"
+    },
+    "answer": "A"
+}
+
+#Now intigrating the input and the logic to check the correct answer.
+#here calling the question1 dictionary and in that we are calling question.
+print(Question_1["question"])
+
+#Now we will call the option for the question and check the input with the answer.
+for key, value in Question_1["options"].items():
+    print(f"{key}.{value}")
+
+# take user input
+user_input1 = input("Your answer (A/B/C/D): ").strip().upper()
+
+#check the answer using if else statement
+
+if user_input1 == Question_1["answer"]:
+    print("✅ Correct!")
+else:
+    print(f"❌ Incorrect. The correct answer is {Question_1['answer']}.")
+
+
+Question_2= {
+    "Question2": "Which of the following is an example of an input device?",
+    "options2":{
+       "A": "Monitor",
+       "B":" Printer",
+       "C": "Keyboard",
+       "D": "Speaker"
+    },
+    "answer2":"C"
+}
+
+#printing the question2
+print(Question_2["Question2"])
+
+#for matching the key and the value 
+for key, value in Question_2["options2"].items():
+    print(f"{key}, {value}")
+
+user_input = input("Your answer (A/B/C/D): ").strip().upper()
+
+if user_input == Question_2["answer2"]:
+    print("✅ Correct!")
+else:
+    print(f"❌ Incorrect. The correct answer is {Question_2['answer2']}.")
+
+
+
+Question_3 = {
+    "question":"Which language is primarily used for web development?",
+    "options":{
+        "A": "Python",
+        "B":" Java",
+        "C": "HTML",
+        "D": "C++"
+    },
+    "answer":"C"
+}
+
+print(Question_3["question"])
+
+for key, value in Question_3["options"].items():
+    print({key},{value})
+
+user_input2 = input("Your answer (A/B/C/D): ").strip().upper()
+
+if user_input == Question_3["answer"]:
+    print("✅ Correct!")
+else:
+    print(f"❌ Incorrect. The correct answer is {Question_3['answer']}.")
